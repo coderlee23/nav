@@ -11,16 +11,12 @@ body{
     width: 100vw;
     height: 100vh;
     min-width: 375px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: #eee;
 }
 
 .container .search {
-    flex: 2;
     width: 100%;
+    height: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,12 +41,12 @@ body{
     margin-left: 20px;
 }
 
-@media (max-width:768px){
+ @media (max-width:768px){
     .logo{
         display: none;
     }
     .container .search {
-        padding: 50px 0;
+        height: 20%;
     }
     .container .search .search-input{
         width: 90%;
@@ -59,26 +55,11 @@ body{
     .container .search .search-btn{
         right: 40px !important; 
     }
-    .label-box {
-        margin-bottom: 20px;
-    }
-    .container .label .label-row{
-        padding: 0 !important;
+    .container .label {
+        grid-template-columns: repeat(3,100px) !important;
+        gap: 20px !important;
     }
     
-}
-@media (min-width: 415px) and (max-width: 767px){
-    .container .label{
-        width: 80% !important;
-    }
-}
-@media (max-width:414px){
-    .container{
-        height: auto;
-    }
-    .container .label{
-        width: 100% !important;
-    }
 }
 
 
@@ -91,23 +72,18 @@ body{
 }
 
 .container .label {
-    flex: 5;
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
-    padding: 10px;
-    /* background-color: red; */
-}
-
-.container .label .label-row {
+    height: auto;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 20px 0;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(6,100px);
+    gap: 40px;
+    margin: 0 auto;
+    justify-items: center;
+
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .label-box {
